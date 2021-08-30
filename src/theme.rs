@@ -28,5 +28,6 @@ pub fn default() -> MadSkin {
         g: 255,
         b: 0,
     });
+
     skin
 }
