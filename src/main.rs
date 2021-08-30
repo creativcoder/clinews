@@ -16,7 +16,7 @@ fn render_articles(articles: &Articles) {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    dotenv()?;
+    dotenv();
 
     let api_key = std::env::var("API_KEY")?;
     
