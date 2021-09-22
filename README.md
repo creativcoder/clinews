@@ -9,16 +9,25 @@ A simple cli news reader app in Rust.
 
 2. [Refactoring the CLI app in Rust](https://www.youtube.com/watch?v=LHPV3z9OSic)
 
+3. [Library API design overhaul, async and more](https://youtu.be/J_yGWdgeGQM)
+
 ## How to install
 
 #### Ubuntu
 
-Use cargo-deb subcommand (`cargo install cargo-deb`) to generate a package and then install system wide using dpkg
+Install the cargo-deb subcommand:
+`cargo install cargo-deb`
 
-#### Linux distribution
-Either cargo install --path .
+generate a deb package by running:
 
-or if you
+`cargo deb` in clinews repository
+
+install the .deb package from target/debian using `dpkg -i <clinews.deb>`
+
+
+#### Other linux distribution
+
+`cargo install --path .` - You will need rust toolchain setup for this.
 
 ## Running clinews
 
@@ -30,4 +39,10 @@ Set the API key in your `.bashrc` or `.zshrc` like:
 export API_KEY=xxx
 ```
 
+then
+
 Run `clinews` from terminal.
+
+## Contributions
+
+Feel free to file issues and PRs
