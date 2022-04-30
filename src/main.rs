@@ -16,7 +16,7 @@ fn render_articles(articles: &Vec<Article>) {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    dotenv();
+    dotenv().ok();
 
     let api_key = std::env::var("API_KEY")?;
 
