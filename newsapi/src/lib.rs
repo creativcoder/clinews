@@ -6,6 +6,7 @@ use url::Url;
 const BASE_URL: &str = "https://newsapi.org/v2";
 
 #[derive(thiserror::Error, Debug)]
+#[non_exhaustive]
 pub enum NewsApiError {
     #[error("Failed fetching articles")]
     RequestFailed(#[from] ureq::Error),
