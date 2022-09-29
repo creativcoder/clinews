@@ -129,6 +129,7 @@ impl NewsAPI {
         let request = client
             .request(Method::GET, url)
             .header("Authorization", &self.api_key)
+            .header("User-Agent", "clinews")
             .build()
             .map_err(|e| NewsApiError::AsyncRequestFailed(e))?;
 
